@@ -16,8 +16,8 @@ app.post("/form", (req, res) => {
   const data = {
     from: `${req.fields.firstName} ${req.fields.lastName} <${req.fields.email}> `,
     to: process.env.MAIL,
-    subject: `Formulaire de ${req.fields.email}`,
-    text: `${req.fields.message}----------\n\nMessage envoyé depuis le site : Tripadvisor Copie - Netlify\nhttps://awesome-goldberg-1da884.netlify.app/`,
+    subject: `Formulaire de ${req.fields.email} - Netlify`,
+    text: `${req.fields.message}\n\n----------\n\nMessage envoyé depuis le site : Tripadvisor Copie - Netlify\nhttps://awesome-goldberg-1da884.netlify.app/`,
   };
 
   let result = false,
